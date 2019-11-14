@@ -8,3 +8,9 @@ snort -W
 ```
 snort -c C:\Snort\etc\snort.conf -A console -i 2 > alert.log
 ```
+
+**3. To clean Snort logs weekly automatically**
+
+```
+schtasks /Create /SC WEEKLY /D WED /TN "Clean Snort Logs" /TR "C:\Users\IEUser\Desktop\snort_log_cleaner.bat" /ST 15:30
+```
